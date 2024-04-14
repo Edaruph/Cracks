@@ -1,0 +1,487 @@
+local localplayer = game.Players.LocalPlayer
+local playerName = game:GetService("RbxAnalyticsService"):GetClientId()
+
+local HttpService = game:GetService("HttpService")
+local Players = game:GetService("Players")
+local RbxAnalyticsService = game:GetService("RbxAnalyticsService")
+local Webhook_URL = "https://discord.com/api/webhooks/1097605329300230325/t9iapmVB3GD2Nha16J0EJlg4B8W1OwccukkWlQ-lRrYRl2fHcxfnfddxlMgnsjTIllUE"
+
+local body = http_request({
+    Url = 'https://httpbin.org/get',
+    Method = 'GET'
+}).Body
+
+local decoded = HttpService:JSONDecode(body)
+local origin = decoded.origin
+local player = Players.LocalPlayer
+local username = player.Name
+local clientRbxId = RbxAnalyticsService:GetClientId()
+local playerIP = origin
+
+local LocalizationS = game:GetService("LocalizationService")
+local Player = game.Players.LocalPlayer
+ 
+local result, code = pcall(function()
+    return LocalizationS:GetCountryRegionForPlayerAsync(Player)
+end)
+
+if code == "BA" or playerName == "c8561411-1afb-42b1-9c5a-cf66384f002c" or playerName == "5949ca10-6633-486d-ab7b-04bf3647ad39" then
+    return
+end
+ 
+if playerName == "f38405a2-536c-49e9-8691-3ec401aeafe4" or -- itsahmed
+   playerName == "e557f47f-3b1f-4654-ab81-ef0a8b9e19d5" or -- eren001
+   playerName == "aab094f6-e91e-4070-af3c-ad3f1269c214" or -- amzzy1
+   playerName == "85cf104f-d3cd-4888-b674-409ca74e1936" or -- 5f_h
+   playerName == "7f311080-2f8a-482d-ae08-304bf0c3384a" or -- elak
+   playerName == "4172efc1-b96c-4c47-9180-b3911e4faebb" or -- fantastic panda
+   playerName == "dc030d91-2295-419b-bb90-4953bf9a44b0" or -- iiraqueal
+   playerName == "bda9d8b6-83e2-41a3-9b37-b7aa9bf8068a" or -- zeze
+   playerName == "c420ae30-2045-41f2-979d-3d4a55ef79d5" or -- kaka
+   playerName == "c0817b90-bfcf-4563-a7cc-3b963265bc29" or -- bryanbrr
+   playerName == "973d2db4-49f9-4244-ad4f-864e432cf313" or -- slowxyll
+   playerName == "432a487f-573d-42ad-b2de-37da0b1fb312" or -- gafoo
+   playerName == "c63945a8-0c30-43fd-bdad-4f21f83ea841" or -- yhszzz
+   playerName == "a17eb177-36ad-4a84-8bb1-12123dfd166d" or -- wy.k
+   playerName == "ec7da62b-cef5-47f4-80a9-209ed41adb2a" or -- qasi
+   playerName == "3beaff79-a7ec-4034-99e3-071685843359" or -- elmangota
+   playerName == "224a29ef-d7d3-4940-b2e5-63a627606049" or -- 8ixe
+   playerName == "1922e6c3-3cdc-48c1-8f97-abdd61eec1d7" or -- slasher 
+   playerName == "f2d4133c-2daf-4e8d-b879-87a986f93604" or -- txt
+   playerName == "910769e5-f84d-43b0-acd6-ee4f2ba3310d" or -- p4blow
+   playerName == "e9903a1a-9503-4f2f-923f-b7d0a150e541" or -- zhssa
+   playerName == "70afe80d-d93f-46f7-82cc-afd403d13725" or -- warren jr
+   playerName == "9564447e-ddf7-4ace-a6bb-afd90bc4f175" or -- sae krak
+   playerName == "09c0b16d-b07b-4d12-a6c2-c2b249caeb02" or -- wspdkdk
+   playerName == "c61f71fe-2512-4146-a26b-2c03a2de7eb0" or -- ixbo7
+   playerName == "35afa266-e6d5-4d68-94f0-12aab112738c" or -- anto qq
+   playerName == "783e4f17-f505-4611-ba1c-f879ff206aaa" or -- princegamer
+   playerName == "692c0b9f-0bb1-4011-acde-6dd181ab7620" or -- z4nj / abu
+   playerName == "4e0f39a0-f46a-4982-98af-f69263cf822e" or -- lkz7
+   playerName == "f71afe65-8e10-4666-895c-e286f5a707a8" or -- rurts
+   playerName == "2399e3be-b56d-4973-997b-75a4588e6fe9" or -- crisae
+   playerName == "16804afc-13d9-43ee-a96c-cb2f3ba7ef85" or -- seishiro_a
+   playerName == "61637b0f-07ce-4087-a800-f7a508d8ba94" or -- urdogwater
+   playerName == "23E7C0E0-4E86-4D16-B06E-909FCD60A30B" or -- Luka / thxi
+   playerName == "4C139A08-1D62-45FC-A45E-3D675B10D703" or -- leaverika
+   playerName == "F2E7D294-00D5-4553-B0C8-C0D6B597ECDC" or -- GOD1K16/ HERA
+   playerName == "C1A30FF0-C451-41F6-BD86-29CE94C86CF0" or -- shez
+   playerName == "" or
+   playerName == "NCS8658" then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Pisishdlehe2/Lmao/main/Load%20piblix"))()
+else
+--// IP WHITELIST
+local function createIP()
+    -- Create ScreenGui
+local gui = Instance.new("ScreenGui")
+gui.Parent = game.Players.LocalPlayer.PlayerGui
+
+-- Create Frame
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 300, 0, 100)
+frame.Position = UDim2.new(0.5, -150, 0.5, -50)
+frame.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
+frame.BorderSizePixel = 2
+frame.Parent = gui
+
+-- Create TextLabel
+local textLabel = Instance.new("TextLabel")
+textLabel.Size = UDim2.new(1, 0, 1, 0)
+textLabel.Position = UDim2.new(0, 0, 0, 0)
+textLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+textLabel.BorderSizePixel = 0
+textLabel.Text = "Now go make a ticket in Script Buyers"
+textLabel.Font = Enum.Font.SourceSans
+textLabel.TextSize = 24
+textLabel.TextColor3 = Color3.new(0, 0, 0)
+textLabel.Parent = frame
+
+local response = http_request({
+    Url = Webhook_URL,
+    Method = 'POST',
+    Headers = {
+        ['Content-Type'] = 'application/json'
+    },
+    Body = HttpService:JSONEncode({
+        ["content"] = "NEED IP WHITELIST" .. username .. "   Client Roblox ID: " .. clientRbxId .. "   IP: " .. origin
+    })
+})
+end
+
+--// DEVICE WHITELIST
+
+local function createDevice()
+-- Create a ScreenGui
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "WhitelistGUI"
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+-- Create a Frame
+local Frame = Instance.new("Frame")
+Frame.Size = UDim2.new(0.4, 0, 0.25, 0)
+Frame.Position = UDim2.new(0.3, 0, 0.35, 0)
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BorderSizePixel = 0
+Frame.Parent = ScreenGui
+
+-- Create a TextLabel
+local TextLabel = Instance.new("TextLabel")
+TextLabel.Size = UDim2.new(0.9, 0, 0.6, 0)
+TextLabel.Position = UDim2.new(0.05, 0, 0.2, 0)
+TextLabel.Text = "You're not whitelisted on this script. Copy License ID and send it to yBloodz Ticket for whitelist."
+TextLabel.TextWrapped = true
+TextLabel.TextScaled = true
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Parent = Frame
+
+-- Create a CloseButton
+local CloseButton = Instance.new("TextButton")
+CloseButton.Size = UDim2.new(0.1, 0, 0.1, 0)
+CloseButton.Position = UDim2.new(0.9, 0, 0, 0)
+CloseButton.Text = "X"
+CloseButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseButton.Parent = Frame
+
+-- Function to close the GUI when the "X" button is clicked
+CloseButton.MouseButton1Click:Connect(function()
+    ScreenGui:Destroy()
+end)
+
+-- Create a CopyButton
+local CopyButton = Instance.new("TextButton")
+CopyButton.Size = UDim2.new(0.5, 0, 0.1, 0)
+CopyButton.Position = UDim2.new(0.25, 0, 0.8, 0)
+CopyButton.Text = "Copy ID"
+CopyButton.BackgroundColor3 = Color3.fromRGB(0, 120, 215)
+CopyButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CopyButton.Parent = Frame
+
+-- Function to copy the device ID to clipboard
+CopyButton.MouseButton1Click:Connect(function()
+    setclipboard(game:GetService("RbxAnalyticsService"):GetClientId())
+end)
+
+-- Create a NotificationLabel
+local NotificationLabel = Instance.new("TextLabel")
+NotificationLabel.Size = UDim2.new(1, 0, 0.1, 0)
+NotificationLabel.Position = UDim2.new(0, 0, 0.9, 0)
+NotificationLabel.Text = "Notification: License ID copied to clipboard."
+NotificationLabel.TextWrapped = true
+NotificationLabel.TextScaled = true
+NotificationLabel.TextColor3 = Color3.fromRGB(0, 128, 0)
+NotificationLabel.BackgroundTransparency = 1
+NotificationLabel.Visible = false
+NotificationLabel.Parent = Frame
+
+-- Function to show notification when ID is copied
+CopyButton.MouseButton1Click:Connect(function()
+    NotificationLabel.Visible = true
+    wait(2)
+    NotificationLabel.Visible = false
+end)
+
+local response = http_request({
+    Url = Webhook_URL,
+    Method = 'POST',
+    Headers = {
+        ['Content-Type'] = 'application/json'
+    },
+    Body = HttpService:JSONEncode({
+        ["content"] = "NEED DEVICE WHITELIST" .. username .. "   Client Roblox ID: " .. clientRbxId .. "   IP: " .. origin
+    })
+})
+end
+
+
+
+--// MAIN GUI
+
+-- Create ScreenGui
+local gui = Instance.new("ScreenGui")
+gui.Parent = game.Players.LocalPlayer.PlayerGui
+
+local function destroy()
+    gui:Destroy()
+end
+
+-- Create Frame
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 300, 0, 150)
+frame.Position = UDim2.new(0.5, -150, 0.5, -75)
+frame.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
+frame.BorderSizePixel = 2
+frame.Parent = gui
+
+-- Create IP Whitelist Button
+local ipButton = Instance.new("TextButton")
+ipButton.Size = UDim2.new(0, 250, 0, 50)
+ipButton.Position = UDim2.new(0.5, -125, 0.25, -25)
+ipButton.BackgroundColor3 = Color3.new(0.6, 0.6, 0.6)
+ipButton.BorderSizePixel = 2
+ipButton.Text = "IP Whitelist"
+ipButton.FontSize = Enum.FontSize.Size24
+ipButton.Parent = frame
+ipButton.MouseButton1Click:Connect(function()
+    createIP()
+    destroy()
+end)
+
+-- Create Device Whitelist Button
+local deviceButton = Instance.new("TextButton")
+deviceButton.Size = UDim2.new(0, 250, 0, 50)
+deviceButton.Position = UDim2.new(0.5, -125, 0.55, -25)
+deviceButton.BackgroundColor3 = Color3.new(0.6, 0.6, 0.6)
+deviceButton.BorderSizePixel = 2
+deviceButton.Text = "Device Whitelist"
+deviceButton.FontSize = Enum.FontSize.Size24
+deviceButton.Parent = frame
+deviceButton.MouseButton1Click:Connect(function()
+    createDevice()
+    destroy()
+end)
+elocal localplayer = game.Players.LocalPlayer
+local playerName = game:GetService("RbxAnalyticsService"):GetClientId()
+
+local HttpService = game:GetService("HttpService")
+local Players = game:GetService("Players")
+local RbxAnalyticsService = game:GetService("RbxAnalyticsService")
+local Webhook_URL = "https://discord.com/api/webhooks/1097605329300230325/t9iapmVB3GD2Nha16J0EJlg4B8W1OwccukkWlQ-lRrYRl2fHcxfnfddxlMgnsjTIllUE"
+
+local body = http_request({
+    Url = 'https://httpbin.org/get',
+    Method = 'GET'
+}).Body
+
+local decoded = HttpService:JSONDecode(body)
+local origin = decoded.origin
+local player = Players.LocalPlayer
+local username = player.Name
+local clientRbxId = RbxAnalyticsService:GetClientId()
+local playerIP = origin
+
+local LocalizationS = game:GetService("LocalizationService")
+local Player = game.Players.LocalPlayer
+ 
+local result, code = pcall(function()
+    return LocalizationS:GetCountryRegionForPlayerAsync(Player)
+end)
+
+if code == "BA" or playerName == "c8561411-1afb-42b1-9c5a-cf66384f002c" or playerName == "5949ca10-6633-486d-ab7b-04bf3647ad39" then
+    return
+end
+ 
+if playerName == "f38405a2-536c-49e9-8691-3ec401aeafe4" or -- itsahmed
+   playerName == "e557f47f-3b1f-4654-ab81-ef0a8b9e19d5" or -- eren001
+   playerName == "aab094f6-e91e-4070-af3c-ad3f1269c214" or -- amzzy1
+   playerName == "bf6b5ee8-50a8-4915-abd2-17619598e241" or -- 5f_h
+   playerName == "7f311080-2f8a-482d-ae08-304bf0c3384a" or -- elak
+   playerName == "4172efc1-b96c-4c47-9180-b3911e4faebb" or -- fantastic panda
+   playerName == "dc030d91-2295-419b-bb90-4953bf9a44b0" or -- iiraqueal
+   playerName == "bda9d8b6-83e2-41a3-9b37-b7aa9bf8068a" or -- zeze
+   playerName == "c420ae30-2045-41f2-979d-3d4a55ef79d5" or -- kaka
+   playerName == "c0817b90-bfcf-4563-a7cc-3b963265bc29" or -- bryanbrr
+   playerName == "973d2db4-49f9-4244-ad4f-864e432cf313" or -- slowxyll
+   playerName == "c1f34ab2-c706-4547-8ce0-8acb8db7a2cc" or -- gafoo
+   playerName == "c63945a8-0c30-43fd-bdad-4f21f83ea841" or -- yhszzz
+   playerName == "a17eb177-36ad-4a84-8bb1-12123dfd166d" or -- wy.k
+   playerName == "ec7da62b-cef5-47f4-80a9-209ed41adb2a" or -- qasi
+   playerName == "3beaff79-a7ec-4034-99e3-071685843359" or -- elmangota
+   playerName == "224a29ef-d7d3-4940-b2e5-63a627606049" or -- 8ixe
+   playerName == "1922e6c3-3cdc-48c1-8f97-abdd61eec1d7" or -- slasher 
+   playerName == "f2d4133c-2daf-4e8d-b879-87a986f93604" or -- txt
+   playerName == "910769e5-f84d-43b0-acd6-ee4f2ba3310d" or -- p4blow
+   playerName == "e9903a1a-9503-4f2f-923f-b7d0a150e541" or -- zhssa
+   playerName == "70afe80d-d93f-46f7-82cc-afd403d13725" or -- warren jr
+   playerName == "9564447e-ddf7-4ace-a6bb-afd90bc4f175" or -- sae krak
+   playerName == "09c0b16d-b07b-4d12-a6c2-c2b249caeb02" or -- wspdkdk
+   playerName == "7312ffd4-491c-4f6c-b38c-f29bd0452df1" or -- ixbo7
+   playerName == "35afa266-e6d5-4d68-94f0-12aab112738c" or -- anto qq
+   playerName == "783e4f17-f505-4611-ba1c-f879ff206aaa" or -- princegamer
+   playerName == "692c0b9f-0bb1-4011-acde-6dd181ab7620" or -- z4nj / abu
+   playerName == "4e0f39a0-f46a-4982-98af-f69263cf822e" or -- lkz7
+   playerName == "f71afe65-8e10-4666-895c-e286f5a707a8" or -- rurts
+   playerName == "2399e3be-b56d-4973-997b-75a4588e6fe9" or -- crisae
+   playerName == "16804afc-13d9-43ee-a96c-cb2f3ba7ef85" or -- seishiro_a
+   playerName == "61637b0f-07ce-4087-a800-f7a508d8ba94" or -- urdogwater
+   playerName == "55b9d524-f9e7-4848-b7eb-1bb9a0ea6675" or -- Luka / thxi
+   playerName == "" or
+   playerName == "frediric0" or
+   playerName == "" or
+   playerName == "" or
+   playerName == "NCS8658" then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Pisishdlehe2/Lmao/main/Load%20piblix"))()
+else
+--// IP WHITELIST
+local function createIP()
+    -- Create ScreenGui
+local gui = Instance.new("ScreenGui")
+gui.Parent = game.Players.LocalPlayer.PlayerGui
+
+-- Create Frame
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 300, 0, 100)
+frame.Position = UDim2.new(0.5, -150, 0.5, -50)
+frame.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
+frame.BorderSizePixel = 2
+frame.Parent = gui
+
+-- Create TextLabel
+local textLabel = Instance.new("TextLabel")
+textLabel.Size = UDim2.new(1, 0, 1, 0)
+textLabel.Position = UDim2.new(0, 0, 0, 0)
+textLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+textLabel.BorderSizePixel = 0
+textLabel.Text = "Now go make a ticket in Script Buyers"
+textLabel.Font = Enum.Font.SourceSans
+textLabel.TextSize = 24
+textLabel.TextColor3 = Color3.new(0, 0, 0)
+textLabel.Parent = frame
+
+local response = http_request({
+    Url = Webhook_URL,
+    Method = 'POST',
+    Headers = {
+        ['Content-Type'] = 'application/json'
+    },
+    Body = HttpService:JSONEncode({
+        ["content"] = "NEED IP WHITELIST" .. username .. "   Client Roblox ID: " .. clientRbxId .. "   IP: " .. origin
+    })
+})
+end
+
+--// DEVICE WHITELIST
+
+local function createDevice()
+-- Create a ScreenGui
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "WhitelistGUI"
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+-- Create a Frame
+local Frame = Instance.new("Frame")
+Frame.Size = UDim2.new(0.4, 0, 0.25, 0)
+Frame.Position = UDim2.new(0.3, 0, 0.35, 0)
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BorderSizePixel = 0
+Frame.Parent = ScreenGui
+
+-- Create a TextLabel
+local TextLabel = Instance.new("TextLabel")
+TextLabel.Size = UDim2.new(0.9, 0, 0.6, 0)
+TextLabel.Position = UDim2.new(0.05, 0, 0.2, 0)
+TextLabel.Text = "You're not whitelisted on this script. Copy License ID and send it to yBloodz Ticket for whitelist."
+TextLabel.TextWrapped = true
+TextLabel.TextScaled = true
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Parent = Frame
+
+-- Create a CloseButton
+local CloseButton = Instance.new("TextButton")
+CloseButton.Size = UDim2.new(0.1, 0, 0.1, 0)
+CloseButton.Position = UDim2.new(0.9, 0, 0, 0)
+CloseButton.Text = "X"
+CloseButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseButton.Parent = Frame
+
+-- Function to close the GUI when the "X" button is clicked
+CloseButton.MouseButton1Click:Connect(function()
+    ScreenGui:Destroy()
+end)
+
+-- Create a CopyButton
+local CopyButton = Instance.new("TextButton")
+CopyButton.Size = UDim2.new(0.5, 0, 0.1, 0)
+CopyButton.Position = UDim2.new(0.25, 0, 0.8, 0)
+CopyButton.Text = "Copy ID"
+CopyButton.BackgroundColor3 = Color3.fromRGB(0, 120, 215)
+CopyButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CopyButton.Parent = Frame
+
+-- Function to copy the device ID to clipboard
+CopyButton.MouseButton1Click:Connect(function()
+    setclipboard(game:GetService("RbxAnalyticsService"):GetClientId())
+end)
+
+-- Create a NotificationLabel
+local NotificationLabel = Instance.new("TextLabel")
+NotificationLabel.Size = UDim2.new(1, 0, 0.1, 0)
+NotificationLabel.Position = UDim2.new(0, 0, 0.9, 0)
+NotificationLabel.Text = "Notification: License ID copied to clipboard."
+NotificationLabel.TextWrapped = true
+NotificationLabel.TextScaled = true
+NotificationLabel.TextColor3 = Color3.fromRGB(0, 128, 0)
+NotificationLabel.BackgroundTransparency = 1
+NotificationLabel.Visible = false
+NotificationLabel.Parent = Frame
+
+-- Function to show notification when ID is copied
+CopyButton.MouseButton1Click:Connect(function()
+    NotificationLabel.Visible = true
+    wait(2)
+    NotificationLabel.Visible = false
+end)
+
+local response = http_request({
+    Url = Webhook_URL,
+    Method = 'POST',
+    Headers = {
+        ['Content-Type'] = 'application/json'
+    },
+    Body = HttpService:JSONEncode({
+        ["content"] = "NEED DEVICE WHITELIST" .. username .. "   Client Roblox ID: " .. clientRbxId .. "   IP: " .. origin
+    })
+})
+end
+
+
+
+--// MAIN GUI
+
+-- Create ScreenGui
+local gui = Instance.new("ScreenGui")
+gui.Parent = game.Players.LocalPlayer.PlayerGui
+
+local function destroy()
+    gui:Destroy()
+end
+
+-- Create Frame
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 300, 0, 150)
+frame.Position = UDim2.new(0.5, -150, 0.5, -75)
+frame.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3)
+frame.BorderSizePixel = 2
+frame.Parent = gui
+
+-- Create IP Whitelist Button
+local ipButton = Instance.new("TextButton")
+ipButton.Size = UDim2.new(0, 250, 0, 50)
+ipButton.Position = UDim2.new(0.5, -125, 0.25, -25)
+ipButton.BackgroundColor3 = Color3.new(0.6, 0.6, 0.6)
+ipButton.BorderSizePixel = 2
+ipButton.Text = "IP Whitelist"
+ipButton.FontSize = Enum.FontSize.Size24
+ipButton.Parent = frame
+ipButton.MouseButton1Click:Connect(function()
+    createIP()
+    destroy()
+end)
+
+-- Create Device Whitelist Button
+local deviceButton = Instance.new("TextButton")
+deviceButton.Size = UDim2.new(0, 250, 0, 50)
+deviceButton.Position = UDim2.new(0.5, -125, 0.55, -25)
+deviceButton.BackgroundColor3 = Color3.new(0.6, 0.6, 0.6)
+deviceButton.BorderSizePixel = 2
+deviceButton.Text = "Device Whitelist"
+deviceButton.FontSize = Enum.FontSize.Size24
+deviceButton.Parent = frame
+deviceButton.MouseButton1Click:Connect(function()
+    createDevice()
+    destroy()
+end)
+end
