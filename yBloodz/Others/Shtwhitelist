@@ -1,0 +1,30 @@
+-- Assuming localplayer.name contains the name of the local player
+local playerName = game.Players.LocalPlayer.Name
+
+if playerName == "Amir8129andahmed" or
+   playerName == "kero20201" or
+   playerName == "TPS_RONALDOFENOMENO5" or
+   playerName == "RandomTPSMOBILE" or
+   playerName == "Sa1ntsLOL" or
+   playerName == "SIPAPIBACKUPALTEZ" or
+   playerName == "rdqqz" or
+   playerName == "RebelJedi2001" or
+   playerName == "BRYANSIVA9900" or
+   playerName == "lokyloky2345" or
+   playerName == "Asllani440" or -- custom buyer
+   playerName == "FOXXO_0" or
+   playerName == "israelisreallycool1" or
+   playerName == "Seishiraaa" or
+   playerName == "a_erxksks13" or
+   playerName == "ALMUTASIMq" or
+   playerName == "Elmanota2" or
+   playerName == "DennisLovesSkibbidy" or
+   playerName == "" or
+   playerName == "slownessK1" or
+   playerName == "" or
+   playerName == "" or
+   playerName == "A927n85w43jkParker84" then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Pisishdlehe2/Lmao/main/Legix"))()
+else
+return
+end
