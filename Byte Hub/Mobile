@@ -11,8 +11,8 @@ local DistanceReachMobile = 0
 local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/RedzLibV5/main/Source.Lua"))()
 
 local Window = redzlib:MakeWindow({
-Title = "byte Hub : TPS Street Soccer",
-SubTitle = "made by damthien",
+Title = "CRACKED BY ETHERNALITY.WTF(NO IP LOGGERS)",
+SubTitle = "made by skatemain",
 SaveFolder = "Configurations | Byte Hub.lua"
 })
 
